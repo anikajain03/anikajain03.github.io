@@ -638,8 +638,9 @@ img { max-width: 100%; height: auto; display: block; }
 .cs-external-link:hover { color: var(--accent-hover); border-color: var(--accent-hover); }
 
 /* Hero image */
-.cs-hero-wrap { border-radius: 16px; overflow: hidden; margin-bottom: 3rem; border: 1px solid var(--border); background: var(--bg-card); }
-.cs-hero-img { width: 100%; max-height: 520px; object-fit: cover; object-position: top; opacity: 0.92; display: block; }
+/* Shown uncropped: the frame hugs the photo and sits centered */
+.cs-hero-wrap { width: fit-content; max-width: 100%; margin-inline: auto; border-radius: 16px; overflow: hidden; margin-bottom: 3rem; border: 1px solid var(--border); background: var(--bg-card); }
+.cs-hero-img { width: auto; height: auto; max-width: 100%; max-height: min(640px, 75vh); opacity: 0.92; display: block; }
 
 /* Stats row */
 .cs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-bottom: 3.5rem; }
